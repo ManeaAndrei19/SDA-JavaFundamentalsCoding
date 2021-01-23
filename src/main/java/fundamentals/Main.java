@@ -8,7 +8,7 @@ public class Main {
         JFCExercises exercise = new JFCExercises();
 
 //        exercise.circle();
-        exercise.BMI();
-
+//        exercise.BMI();
+        exercise.quadratic();
     }
 }

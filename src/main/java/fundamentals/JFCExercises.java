@@ -45,5 +45,31 @@ public class JFCExercises {
 
     }
 
+//    Write a program for solving a quadratic equation. The program should take three integers
+//            (coefficients of the quadratic equation a, b, c) and calculate the roots of the
+//    equation
+//    If delta ∆ comes out negative, print "Delta negative" and exit the program.
+//    Formulas youЀll need:
+
+
+    public void quadratic() {
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("Input a:");
+        int a = scan.nextInt();
+        System.out.print("Input b:");
+        int b = scan.nextInt();
+        System.out.print("Input c:");
+        int c = scan.nextInt();
+
+        int delta = b * b - 4 * a * c;
+
+        if (delta < 0) {
+            System.out.println("Delta negative");
+        } else {
+            System.out.println("X1: " + (-b - Math.sqrt(delta) / (2 * a)) + "\nX2: " + (-b + Math.sqrt(delta) / (2 * a)));
+        }
+    }
+
 
 }
