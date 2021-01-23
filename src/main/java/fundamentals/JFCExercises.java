@@ -114,8 +114,9 @@ public class JFCExercises {
 
         System.out.print("Input nr:");
         int nr = scan.nextInt();
-        if (nr < 0) {
-            System.out.print("Number given was negative, please input a new one: ");
+        while (nr < 1) {
+            System.out.print("Number given was negative or equal to 0, please input a new one: ");
+            nr = scan.nextInt();
         }
 
         System.out.print("The prime numbers up to the given number are: ");
@@ -125,6 +126,26 @@ public class JFCExercises {
             }
         }
 
+    }
+
+//    6. Write an application that takes a number n from the user (type int) and calculates the
+//    sum of the harmonic series from 1 to n, according to the formula below:
+
+    public void harmonicSeries() {
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("Input nr:");
+        int nr = scan.nextInt();
+        while (nr < 1) {
+            System.out.print("Number given was negative or equal to 0, please input a new one: ");
+            nr = scan.nextInt();
+        }
+
+        double H = 0;
+        for (double i = 1; i <= nr; i++) {
+            H +=1/i;
+        }
+        System.out.print("The harmonic series up to the number given is: " + H);
     }
 
 
