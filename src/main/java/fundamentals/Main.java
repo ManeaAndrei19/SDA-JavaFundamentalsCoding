@@ -9,6 +9,7 @@ public class Main {
 
 //        exercise.circle();
 //        exercise.BMI();
-        exercise.quadratic();
+//        exercise.quadratic();
+        exercise.fizzBuzz();
     }
 }
