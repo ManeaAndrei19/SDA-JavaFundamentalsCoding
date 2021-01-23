@@ -143,9 +143,43 @@ public class JFCExercises {
 
         double H = 0;
         for (double i = 1; i <= nr; i++) {
-            H +=1/i;
+            H += 1 / i;
         }
         System.out.print("The harmonic series up to the number given is: " + H);
+    }
+
+//   6. Write an application that will take a positive number from the user (type int) and
+//    calculate the Fibonacci number at the indicated index. For example, if the number equals
+//    5, your program should print the fifth Fibonacci number. In Fibonacci sequence, each
+//    number is the sum of the two preceding ones. For example, the first few Fibonacci
+//    numbers are:
+//            1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377…
+
+    public void fibonacci() {
+        Scanner scan = new Scanner(System.in);
+        int n1 = 1, n2 = 1, n3;
+
+        System.out.print("Input nr:");
+        int nr = scan.nextInt();
+        while (nr < 1) {
+            System.out.print("Number given was negative or equal to 0, please input a new one: ");
+            nr = scan.nextInt();
+        }
+
+        System.out.print("The Fibonacci series: ");
+        if (nr == 1) {
+            System.out.print(n1);
+        } else if (nr == 2) {
+            System.out.print(n1 + " " + n2);
+        } else {
+            System.out.print(n1 + " " + n2 + " ");
+            for (int i = 3; i <= nr; i++) {
+                n3 = n1 + n2;
+                System.out.print(n3 + " ");
+                n1 = n2;
+                n2 = n3;
+            }
+        }
     }
 
 

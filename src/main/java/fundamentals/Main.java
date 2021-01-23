@@ -12,8 +12,8 @@ public class Main {
 //        exercise.quadratic();
 //        exercise.fizzBuzz();
 //        exercise.primeShow();
-        exercise.harmonicSeries();
-
+//        exercise.harmonicSeries();
+        exercise.fibonacci();
 
     }
 }
