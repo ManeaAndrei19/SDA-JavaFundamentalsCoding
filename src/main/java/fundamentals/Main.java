@@ -10,6 +10,8 @@ public class Main {
 //        exercise.circle();
 //        exercise.BMI();
 //        exercise.quadratic();
-        exercise.fizzBuzz();
+//        exercise.fizzBuzz();
+        exercise.primeShow();
+
     }
 }

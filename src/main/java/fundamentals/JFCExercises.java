@@ -96,5 +96,36 @@ public class JFCExercises {
 
     }
 
+//    5. Write an application that takes a positive number from the user (type int) and prints all
+//    prime numbers greater than 1 and less than the given number.
+
+    public boolean primeCheck(int x) {
+        boolean check = false;
+        for (int i = 2; i <= x / 2; i++) {
+            if (x % i == 0) {
+                check = true;
+            }
+        }
+        return check;
+    }
+
+    public void primeShow() {
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("Input nr:");
+        int nr = scan.nextInt();
+        if (nr < 0) {
+            System.out.print("Number given was negative, please input a new one: ");
+        }
+
+        System.out.print("The prime numbers up to the given number are: ");
+        for (int i = 2; i <= nr; i++) {
+            if (!primeCheck(i)) {
+                System.out.print(" " + i + " ");
+            }
+        }
+
+    }
+
 
 }
