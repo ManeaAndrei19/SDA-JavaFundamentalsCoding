@@ -25,7 +25,7 @@ public class JFCExercises {
 //    values. Your program should write "BMI optimal" or "BMI not optimal", according to the
 //    assumptions above.
 
-    public void BMI(){
+    public void BMI() {
         Scanner scan = new Scanner(System.in);
 
         System.out.print("Input weight: ");
@@ -33,6 +33,16 @@ public class JFCExercises {
 
         System.out.print("Input height: ");
         int height = scan.nextInt();
+
+        double BMI = weight / (height * height);
+        System.out.println("BMI is: " + BMI);
+
+        if (BMI >= 18.5 && BMI <= 24.9) {
+            System.out.println("BMI optimal");
+        } else {
+            System.out.println("BMI not optimal");
+        }
+
     }
 
 
