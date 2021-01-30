@@ -102,14 +102,27 @@ public class JFCExercises {
 //    prime numbers greater than 1 and less than the given number.
 
     public boolean primeCheck(int x) {
-        boolean check = false;
         for (int i = 2; i <= x / 2; i++) {
             if (x % i == 0) {
-                check = true;
-                break;
+                return false;
             }
         }
-        return check;
+        return true;
+    }
+
+    public boolean primeCheckBest(int x) {
+        if (x == 2) {
+            return true;
+        }
+        if (x < 2 || x % 2 == 0) {
+            return false;
+        }
+        for (int i = 3; i * i <= x; i += 2) {
+            if (x % i == 0) {
+                return false;
+            }
+        }
+        return true;
     }
 
     public void primeShow() {
@@ -124,7 +137,7 @@ public class JFCExercises {
 
         System.out.print("The prime numbers up to the given number are: ");
         for (int i = 2; i <= nr; i++) {
-            if (!primeCheck(i)) {
+            if (primeCheckBest(i)) {
                 System.out.print(" " + i + " ");
             }
         }

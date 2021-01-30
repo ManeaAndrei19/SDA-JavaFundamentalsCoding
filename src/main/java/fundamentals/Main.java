@@ -11,7 +11,7 @@ public class Main {
 //        exercise.BMI();
 //        exercise.quadratic();
 //        exercise.fizzBuzz();
-//        exercise.primeShow();
+        exercise.primeShow();
 //        exercise.harmonicSeries();
 //        exercise.fibonacci();
 
