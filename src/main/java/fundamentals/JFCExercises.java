@@ -199,4 +199,26 @@ public class JFCExercises {
     }
 
 
+//    8. Write an application that will read texts (variables of the String type) until the user gives the text
+//    "Enough!"
+//    and then writes the longest of the given texts (not including the text "Enough!"). If the user does not provide
+//    any text, write "No text provided".
+
+    public void longestWord() {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Type your word: ");
+
+        String word = "", longest = "";
+        while (!word.equals("Enough!")) {
+            if (longest.length() < word.length()) {
+                longest = word;
+            }
+            word = scan.next();
+        }
+        if (longest.length() == 0) {
+            System.out.println("No text provided");
+            return;
+        }
+        System.out.println("The longest word is: " + longest);
+    }
 }
