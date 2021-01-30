@@ -85,10 +85,12 @@ public class JFCExercises {
         int nr = scan.nextInt();
 
         for (int i = 1; i <= nr; i++) {
-            if (i % 3 == 0) {
-                System.out.print(" Fizz ");
+            if (i % 21 == 0) {
+                System.out.print(" FizzBuzz ");
             } else if (i % 7 == 0) {
                 System.out.print(" Buzz ");
+            } else if (i % 3 == 0) {
+                System.out.print(" Fizz ");
             } else {
                 System.out.print(" " + i + " ");
             }
@@ -104,6 +106,7 @@ public class JFCExercises {
         for (int i = 2; i <= x / 2; i++) {
             if (x % i == 0) {
                 check = true;
+                break;
             }
         }
         return check;
@@ -114,8 +117,8 @@ public class JFCExercises {
 
         System.out.print("Input nr:");
         int nr = scan.nextInt();
-        while (nr < 1) {
-            System.out.print("Number given was negative or equal to 0, please input a new one: ");
+        while (nr < 2) {
+            System.out.print("Number given was lower than 2, please input a new one: ");
             nr = scan.nextInt();
         }
 
@@ -148,7 +151,7 @@ public class JFCExercises {
         System.out.print("The harmonic series up to the number given is: " + H);
     }
 
-//   6. Write an application that will take a positive number from the user (type int) and
+//   7. Write an application that will take a positive number from the user (type int) and
 //    calculate the Fibonacci number at the indicated index. For example, if the number equals
 //    5, your program should print the fifth Fibonacci number. In Fibonacci sequence, each
 //    number is the sum of the two preceding ones. For example, the first few Fibonacci
