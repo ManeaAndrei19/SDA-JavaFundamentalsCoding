@@ -85,10 +85,12 @@ public class JFCExercises {
         int nr = scan.nextInt();
 
         for (int i = 1; i <= nr; i++) {
-            if (i % 3 == 0) {
-                System.out.print(" Fizz ");
+            if (i % 21 == 0) {
+                System.out.print(" FizzBuzz ");
             } else if (i % 7 == 0) {
                 System.out.print(" Buzz ");
+            } else if (i % 3 == 0) {
+                System.out.print(" Fizz ");
             } else {
                 System.out.print(" " + i + " ");
             }
@@ -100,13 +102,27 @@ public class JFCExercises {
 //    prime numbers greater than 1 and less than the given number.
 
     public boolean primeCheck(int x) {
-        boolean check = false;
         for (int i = 2; i <= x / 2; i++) {
             if (x % i == 0) {
-                check = true;
+                return false;
             }
         }
-        return check;
+        return true;
+    }
+
+    public boolean primeCheckBest(int x) {
+        if (x == 2) {
+            return true;
+        }
+        if (x < 2 || x % 2 == 0) {
+            return false;
+        }
+        for (int i = 3; i * i <= x; i += 2) {
+            if (x % i == 0) {
+                return false;
+            }
+        }
+        return true;
     }
 
     public void primeShow() {
@@ -114,14 +130,14 @@ public class JFCExercises {
 
         System.out.print("Input nr:");
         int nr = scan.nextInt();
-        while (nr < 1) {
-            System.out.print("Number given was negative or equal to 0, please input a new one: ");
+        while (nr < 2) {
+            System.out.print("Number given was lower than 2, please input a new one: ");
             nr = scan.nextInt();
         }
 
         System.out.print("The prime numbers up to the given number are: ");
         for (int i = 2; i <= nr; i++) {
-            if (!primeCheck(i)) {
+            if (primeCheckBest(i)) {
                 System.out.print(" " + i + " ");
             }
         }
@@ -148,7 +164,7 @@ public class JFCExercises {
         System.out.print("The harmonic series up to the number given is: " + H);
     }
 
-//   6. Write an application that will take a positive number from the user (type int) and
+//   7. Write an application that will take a positive number from the user (type int) and
 //    calculate the Fibonacci number at the indicated index. For example, if the number equals
 //    5, your program should print the fifth Fibonacci number. In Fibonacci sequence, each
 //    number is the sum of the two preceding ones. For example, the first few Fibonacci
@@ -183,4 +199,72 @@ public class JFCExercises {
     }
 
 
+//    8. Write an application that will read texts (variables of the String type) until the user gives the text
+//    "Enough!"
+//    and then writes the longest of the given texts (not including the text "Enough!"). If the user does not provide
+//    any text, write "No text provided".
+
+    public void longestWord() {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Type your word: ");
+
+        String word = "", longest = "";
+        while (!word.equals("Enough!")) {
+            if (longest.length() < word.length()) {
+                longest = word;
+            }
+            word = scan.next();
+        }
+        if (longest.length() == 0) {
+            System.out.println("No text provided");
+            return;
+        }
+        System.out.println("The longest word is: " + longest);
+    }
+
+
+//    Task13. Write an application that "stutters", that is, reads the user's text (type String), and prints
+//        the given text, in which each word is printed twice.
+//        For example, for the input: "This is my test" the application should print "This This is is
+//        my my test test".
+
+    public void stutters() {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Type your word: ");
+
+        String text = scan.nextLine();
+        String[] words = text.split(" ");
+
+        System.out.print("Stutter: ");
+
+        for (int i = 0; i < words.length - 1; i++) {
+            System.out.print(words[i] + " " + words[i] + " ");
+        }
+        System.out.print(words[words.length - 1] + " " + words[words.length - 1]);
+    }
+
+//    Test string
+
+    public void testStrings() {
+        String s1 = "abc", s2 = "abc", s3 = new String("abc");
+        System.out.println(s1 == s2);
+        System.out.println(s1 == s3);
+        System.out.println(s1.equals(s3));
+    }
+
+//    Test objects from Dog class
+
+    public void testObjects() {
+        Dog dog1 = new Dog("Azorel");
+//        dog1.setName("Azorel");
+
+        Dog dog2 = new Dog("Azorel");
+//        dog2.setName("Azorel");
+
+        System.out.println(dog1 == dog2);
+        System.out.println(dog1.equals(dog2));
+        System.out.println(dog1.getName().equals(dog2.getName()));
+    }
+
 }
+

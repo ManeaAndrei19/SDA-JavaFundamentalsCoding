@@ -17,6 +17,14 @@ public class Main {
 
 //        ############## Java Fundamentals Coding WEEK 5.1#########################
 
+//        exercise.longestWord();
+
+//        ############## Java Fundamentals Coding WEEK 5.2#########################
+
+//        exercise.stutters();
+//        exercise.testStrings();
+        exercise.testObjects();
+
 
     }
 }
