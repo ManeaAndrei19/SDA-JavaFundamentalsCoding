@@ -19,5 +19,10 @@ public class Main {
 
 //        exercise.longestWord();
 
+//        ############## Java Fundamentals Coding WEEK 5.2#########################
+
+
+
+
     }
 }
