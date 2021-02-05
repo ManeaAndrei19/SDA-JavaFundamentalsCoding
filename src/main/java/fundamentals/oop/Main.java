@@ -4,8 +4,10 @@ public class Main {
     public static void main(String[] args) {
         ArrayExercises arrayEx = new ArrayExercises();
         int[] array = {2, 3, 5, 6, -7, 7, 5, 8, -9};
+        String[] text = {"ala", "bala", "protocala portocalie"};
 
-        arrayEx.maxProduct(array);
+//        arrayEx.maxProduct(array);
+        arrayEx.testStringArray(text);
 
 
         /** Bank Account&Client

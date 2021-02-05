@@ -1,5 +1,7 @@
 package fundamentals.oop;
 
+import java.util.Scanner;
+
 public class ArrayExercises {
 
 //    Task A: Write a Java program to find maximum product of two integers in a given array of integers.
@@ -33,4 +35,21 @@ public class ArrayExercises {
 
         }
     }
+
+
+//    Task B: Write a Java program to test if an array of strings contains a specific value.
+
+    public void testStringArray(String[] array) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Input the word: ");
+        String word = scan.nextLine();
+        for (int i = 0; i < array.length; i++) {
+            if (array[i].equals(word)) {
+                System.out.println("The array contains the word");
+                return;
+            }
+        }
+        System.out.println("The array doesn't contain the word");
+    }
+
 }
