@@ -4,10 +4,12 @@ public class Main {
     public static void main(String[] args) {
         ArrayExercises arrayEx = new ArrayExercises();
         int[] array = {2, 3, 5, 6, -7, 7, 5, 8, -9};
+        int[] copyArray;
         String[] text = {"ala", "bala", "protocala portocalie"};
 
 //        arrayEx.maxProduct(array);
-        arrayEx.testStringArray(text);
+//        arrayEx.testStringArray(text);
+        copyArray = arrayEx.removeElement(array, 3);
 
 
         /** Bank Account&Client

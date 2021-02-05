@@ -1,5 +1,7 @@
 package fundamentals.oop;
 
+import sun.security.util.ArrayUtil;
+
 import java.util.Scanner;
 
 public class ArrayExercises {
@@ -50,6 +52,31 @@ public class ArrayExercises {
             }
         }
         System.out.println("The array doesn't contain the word");
+    }
+
+//    Task C: Write a Java program to remove a specific element from an array.
+
+    public int[] removeElement(int[] array, int index) {
+        int[] copyArray = new int[array.length - 1];
+
+        System.out.print("Array before: ");
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " ");
+        }
+        
+        for (int i = index - 1; i < array.length - 1; i++) {
+            array[i] = array[i + 1];
+        }
+        for (int i = 0; i < array.length - 1; i++) {
+            copyArray[i] = array[i];
+        }
+
+        System.out.print("\nArray after: ");
+        for (int i = 0; i < copyArray.length; i++) {
+            System.out.print(array[i] + " ");
+        }
+
+        return copyArray;
     }
 
 }
