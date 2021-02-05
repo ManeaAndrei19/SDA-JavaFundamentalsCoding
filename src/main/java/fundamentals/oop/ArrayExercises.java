@@ -63,7 +63,7 @@ public class ArrayExercises {
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + " ");
         }
-        
+
         for (int i = index - 1; i < array.length - 1; i++) {
             array[i] = array[i + 1];
         }
@@ -78,5 +78,21 @@ public class ArrayExercises {
 
         return copyArray;
     }
+
+//    Task D: Write a Java program to find the max number (harder: the second max number) in an array of integers.
+
+    public void secondMax(int[] array) {
+        int max1 = Integer.MIN_VALUE, max2 = Integer.MIN_VALUE;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] > max1) {
+                max2 = max1;
+                max1 = array[i];
+            } else if (array[i] > max2) {
+                max2 = array[i];
+            }
+        }
+        System.out.println("First and second max pair: (" + max1 + ", " + max2 + ")");
+    }
+
 
 }

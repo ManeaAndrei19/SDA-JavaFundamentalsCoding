@@ -9,8 +9,8 @@ public class Main {
 
 //        arrayEx.maxProduct(array);
 //        arrayEx.testStringArray(text);
-        copyArray = arrayEx.removeElement(array, 3);
-
+//        copyArray = arrayEx.removeElement(array, 3);
+        arrayEx.secondMax(array);
 
         /** Bank Account&Client
          *
