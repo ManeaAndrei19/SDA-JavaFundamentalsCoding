@@ -6,11 +6,13 @@ public class Main {
         int[] array = {2, 3, 5, 6, -7, 7, 5, 8, -9};
         int[] copyArray;
         String[] text = {"ala", "bala", "protocala portocalie"};
+        String[] copyText;
 
 //        arrayEx.maxProduct(array);
 //        arrayEx.testStringArray(text);
 //        copyArray = arrayEx.removeElement(array, 3);
-        arrayEx.secondMax(array);
+//        arrayEx.secondMax(array);
+        copyText = arrayEx.duplicateStringArray(text);
 
         /** Bank Account&Client
          *

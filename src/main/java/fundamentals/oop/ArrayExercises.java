@@ -73,7 +73,7 @@ public class ArrayExercises {
 
         System.out.print("\nArray after: ");
         for (int i = 0; i < copyArray.length; i++) {
-            System.out.print(array[i] + " ");
+            System.out.print(copyArray[i] + " ");
         }
 
         return copyArray;
@@ -94,5 +94,27 @@ public class ArrayExercises {
         System.out.println("First and second max pair: (" + max1 + ", " + max2 + ")");
     }
 
+//    Task E: Write a Java program to find the duplicate values of an array of string values.
+
+    public String[] duplicateStringArray(String[] array) {
+        String[] copyArray = new String[array.length * 2];
+
+        System.out.print("Array before: ");
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " ");
+        }
+
+        for (int i = 0; i < array.length; i++) {
+            copyArray[2 * i] = array[i];
+            copyArray[2 * i + 1] = array[i];
+        }
+
+        System.out.print("\nArray after: ");
+        for (int i = 0; i < copyArray.length; i++) {
+            System.out.print(copyArray[i] + " ");
+        }
+
+        return copyArray;
+    }
 
 }
