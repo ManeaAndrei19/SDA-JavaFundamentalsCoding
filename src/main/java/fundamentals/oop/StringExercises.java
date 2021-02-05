@@ -34,4 +34,22 @@ public class StringExercises {
 
         return text;
     }
+
+//    Task D: Write a Java program to uppercase first letter of every word in a text(string).
+
+    public String upper(String text) {
+        String[] array = text.split(" ");
+        StringBuffer sb = new StringBuffer();
+
+        System.out.println(text);
+
+        for (int i = 0; i < array.length; i++) {
+            sb.append(Character.toUpperCase(array[i].charAt(0)))
+                    .append(array[i].substring(1)).append(" ");
+        }
+
+        System.out.println(sb.toString().trim());
+
+        return sb.toString().trim();
+    }
 }

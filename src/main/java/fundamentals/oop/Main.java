@@ -9,11 +9,12 @@ public class Main {
         StringExercises stringxEx = new StringExercises();
         String word = "abcdefghijklmnopqrstuvwxyz";
         char c;
-        String find = "fgh", change = "aabbccddaaddffssaadda";
+        String find = "fgh", change = "aabbccddaaddffssaadda", textUp = "aaa bbb ccc";
 
 //        c = stringxEx.charaterIndexGet(word, 3);
 //        stringxEx.stringInStringCheck(word, find);
-        change = stringxEx.changeChar(change, 'a', 'x');
+//        change = stringxEx.changeChar(change, 'a', 'x');
+        textUp = stringxEx.upper(textUp);
 
         /** Array Exercises
          *
