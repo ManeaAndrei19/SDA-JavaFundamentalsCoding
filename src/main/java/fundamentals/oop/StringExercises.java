@@ -52,4 +52,15 @@ public class StringExercises {
 
         return sb.toString().trim();
     }
+
+//    Task E: Write a Java program to compare 2 strings ignoring case consideration.  (e.g: “Dog” is equal to “dOG”)
+
+    public void compareNoCase(String text1, String text2) {
+        if (text1.equalsIgnoreCase(text2)) {
+            System.out.println("Texts are equal");
+            return;
+        }
+        System.out.println("Texts aren't equal");
+    }
+
 }
