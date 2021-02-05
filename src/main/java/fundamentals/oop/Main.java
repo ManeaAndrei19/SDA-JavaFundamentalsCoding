@@ -2,23 +2,35 @@ package fundamentals.oop;
 
 public class Main {
     public static void main(String[] args) {
-        ArrayExercises arrayEx = new ArrayExercises();
-        int[] array = {2, 3, 5, 6, -7, 7, 5, 8, -9};
-        int[] copyArray;
-        String[] text = {"ala", "bala", "protocala portocalie"};
-        String[] copyText;
 
-//        arrayEx.maxProduct(array);
-//        arrayEx.testStringArray(text);
-//        copyArray = arrayEx.removeElement(array, 3);
-//        arrayEx.secondMax(array);
-        copyText = arrayEx.duplicateStringArray(text);
+        /**String Exercises
+         *
+         */
+        StringExercises stringxEx = new StringExercises();
+        String word = "abcdefghijklmnopqrstuvwxyz";
+        char c;
+
+        c = stringxEx.charaterIndexGet(word, 3);
+
+
+        /** Array Exercises
+         *
+         ArrayExercises arrayEx = new ArrayExercises();
+         int[] array = {2, 3, 5, 6, -7, 7, 5, 8, -9};
+         int[] copyArray;
+         String[] text = {"ala", "bala", "protocala portocalie"};
+         String[] copyText;
+
+         //        arrayEx.maxProduct(array);
+         //        arrayEx.testStringArray(text);
+         //        copyArray = arrayEx.removeElement(array, 3);
+         //        arrayEx.secondMax(array);
+         //        copyText = arrayEx.duplicateStringArray(text);
+
+         */
 
         /** Bank Account&Client
          *
-
-
-         {
          BankAccount bankAccount = new BankAccount();
          BankAccount bankAccount2 = new BankAccount("SAVING", "EUR");
          Client client = new Client("123412454", "Andrei", bankAccount);
@@ -62,7 +74,6 @@ public class Main {
 
          //        client.getBankAccounts()
 
-         }
          */
 
 
