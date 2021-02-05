@@ -9,8 +9,10 @@ public class Main {
         StringExercises stringxEx = new StringExercises();
         String word = "abcdefghijklmnopqrstuvwxyz";
         char c;
+        String find = "fgh";
 
-        c = stringxEx.charaterIndexGet(word, 3);
+//        c = stringxEx.charaterIndexGet(word, 3);
+        stringxEx.stringInStringCheck(word, find);
 
 
         /** Array Exercises
