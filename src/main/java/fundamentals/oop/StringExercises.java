@@ -25,4 +25,13 @@ public class StringExercises {
             System.out.println("No match found.");
     }
 
+//    Task C: Write a Java program to replace a specified character with another character in a string.
+
+    public String changeChar(String text, char before, char after) {
+        System.out.println("Word before change: " + text);
+        text = text.replace(before, after);
+        System.out.println("Word after change: " + text);
+
+        return text;
+    }
 }

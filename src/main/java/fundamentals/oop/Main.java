@@ -9,11 +9,11 @@ public class Main {
         StringExercises stringxEx = new StringExercises();
         String word = "abcdefghijklmnopqrstuvwxyz";
         char c;
-        String find = "fgh";
+        String find = "fgh", change = "aabbccddaaddffssaadda";
 
 //        c = stringxEx.charaterIndexGet(word, 3);
-        stringxEx.stringInStringCheck(word, find);
-
+//        stringxEx.stringInStringCheck(word, find);
+        change = stringxEx.changeChar(change, 'a', 'x');
 
         /** Array Exercises
          *
@@ -23,11 +23,11 @@ public class Main {
          String[] text = {"ala", "bala", "protocala portocalie"};
          String[] copyText;
 
-         //        arrayEx.maxProduct(array);
-         //        arrayEx.testStringArray(text);
-         //        copyArray = arrayEx.removeElement(array, 3);
-         //        arrayEx.secondMax(array);
-         //        copyText = arrayEx.duplicateStringArray(text);
+         arrayEx.maxProduct(array);
+         arrayEx.testStringArray(text);
+         copyArray = arrayEx.removeElement(array, 3);
+         arrayEx.secondMax(array);
+         copyText = arrayEx.duplicateStringArray(text);
 
          */
 
