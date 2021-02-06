@@ -7,6 +7,12 @@ public class Product {
     private double price;
     private int[] expirationDate;
 
+    public Product(String name, double price, int[] expirationDate) {
+        this.name = name;
+        this.price = price;
+        this.expirationDate = expirationDate;
+    }
+
     public int[] addDate() {
         Scanner scan = new Scanner(System.in);
         int[] date = new int[3];

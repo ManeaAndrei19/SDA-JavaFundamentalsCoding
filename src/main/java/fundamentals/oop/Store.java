@@ -4,8 +4,16 @@ public class Store {
     private Product[] products;
 
     public Product[] getListOfProductsWithPriceBiggerThan(double limitPrice) {
-        Product[] copyArray = new Product[this.products.length];
         int index = 0;
+        int length = 0;
+        for (int i = 0; i < this.products.length; i++) {
+            if (this.products[i].getPrice() > limitPrice) {
+                length++;
+            }
+        }
+
+        Product[] copyArray = new Product[length];
+
 
         System.out.println("Show products within price range: ");
         for (int i = 0; i < this.products.length; i++) {

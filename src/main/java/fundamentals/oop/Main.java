@@ -6,6 +6,19 @@ public class Main {
         /**OOP Store
          *
          */
+        Product product1 = new Product("Water", 5.9, new int[]{15, 9, 2022});
+        Product product2 = new Product("Beer", 7.9, new int[]{21, 12, 2023});
+        Product product3 = new Product("Wine", 20.9, new int[]{1, 2, 2050});
+
+        Product[] products = {product1, product2, product3};
+        Product[] productsWithBiggerPrice;
+        Store store = new Store();
+        store.setProducts(products);
+
+        productsWithBiggerPrice = store.getListOfProductsWithPriceBiggerThan(6);
+        for (int i = 0; i < productsWithBiggerPrice.length; i++) {
+            System.out.println(productsWithBiggerPrice[i].getName());
+        }
 
         /**String Exercises
          *
