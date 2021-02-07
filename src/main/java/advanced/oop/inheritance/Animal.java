@@ -7,4 +7,8 @@ public class Animal {
         System.out.println("The animal is eating.");
     }
 
+    public void makeSoud(){
+        System.out.println("The animal is making sound");
+    }
+
 }
