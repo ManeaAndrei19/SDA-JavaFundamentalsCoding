@@ -77,7 +77,7 @@ public class Main {
         GeometricFigure square = new Square(5);
         GeometricFigure circle = new Circle(2.5);
         GeometricFigure triangle = new Triangle(5, 7, 9);
-        GeometricFigure rectangle=new Rectangle(5,6);
+        GeometricFigure rectangle = new Rectangle(5, 6);
 
         System.out.println("Square perimeter: " + square.calculatePerimeter());
         System.out.println("Circle perimeter: " + circle.calculatePerimeter());

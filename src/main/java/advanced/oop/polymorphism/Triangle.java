@@ -18,7 +18,7 @@ public class Triangle extends GeometricFigure {
 
     @Override
     public double calculateAria() {
-        double S=calculatePerimeter();
-        return Math.sqrt(S*(S-side1)*(S-side2)*(S-side3));
+        double S = calculatePerimeter();
+        return Math.sqrt(S * (S - side1) * (S - side2) * (S - side3));
     }
 }

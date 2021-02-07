@@ -14,6 +14,6 @@ public class Circle extends GeometricFigure {
 
     @Override
     public double calculateAria() {
-        return Math.PI * radius*radius;
+        return Math.PI * radius * radius;
     }
 }

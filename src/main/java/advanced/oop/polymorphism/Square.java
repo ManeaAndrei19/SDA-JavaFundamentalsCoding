@@ -14,6 +14,6 @@ public class Square extends GeometricFigure {
 
     @Override
     public double calculateAria() {
-        return side*side;
+        return side * side;
     }
 }
