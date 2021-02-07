@@ -15,4 +15,10 @@ public class Triangle extends GeometricFigure {
     public double calculatePerimeter() {
         return side1 + side2 + side3;
     }
+
+    @Override
+    public double calculateAria() {
+        double S=calculatePerimeter();
+        return Math.sqrt(S*(S-side1)*(S-side2)*(S-side3));
+    }
 }

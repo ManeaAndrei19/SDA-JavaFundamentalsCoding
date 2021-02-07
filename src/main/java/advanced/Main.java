@@ -3,15 +3,12 @@ package advanced;
 import advanced.oop.inheritance.Animal;
 import advanced.oop.inheritance.Cat;
 import advanced.oop.inheritance.Dog;
-import advanced.oop.polymorphism.Circle;
-import advanced.oop.polymorphism.GeometricFigure;
-import advanced.oop.polymorphism.Square;
-import advanced.oop.polymorphism.Triangle;
+import advanced.oop.polymorphism.*;
 
 public class Main {
     public static void main(String[] args) {
 
-//        playWithGeometricFigures();
+        playWithGeometricFigures();
 //        playWithPolymorphism();
 //        playWithInheritance();
 //        playWithAbstraction();
@@ -77,13 +74,20 @@ public class Main {
     }
 
     public static void playWithGeometricFigures() {
-        GeometricFigure square = new Square(2);
-        GeometricFigure circle = new Circle(5);
+        GeometricFigure square = new Square(5);
+        GeometricFigure circle = new Circle(2.5);
         GeometricFigure triangle = new Triangle(5, 7, 9);
+        GeometricFigure rectangle=new Rectangle(5,6);
 
         System.out.println("Square perimeter: " + square.calculatePerimeter());
         System.out.println("Circle perimeter: " + circle.calculatePerimeter());
         System.out.println("Triangle perimeter: " + triangle.calculatePerimeter());
+        System.out.println("Rectangle perimeter: " + triangle.calculatePerimeter());
+
+        System.out.println("\nSquare aria: " + square.calculateAria());
+        System.out.println("Circle aria: " + circle.calculateAria());
+        System.out.println("Triangle aria: " + triangle.calculateAria());
+        System.out.println("Rectangle aria: " + triangle.calculateAria());
 
 
     }
