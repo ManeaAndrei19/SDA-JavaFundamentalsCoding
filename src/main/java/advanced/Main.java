@@ -8,12 +8,22 @@ import advanced.oop.polymorphism.*;
 public class Main {
     public static void main(String[] args) {
 
-        playWithGeometricFigures();
+
+//        playWithGeometricFigures();
 //        playWithPolymorphism();
 //        playWithInheritance();
 //        playWithAbstraction();
 
     }
+
+    /**
+     * Interfaces
+     */
+
+    public static void playWithInterfaces() {
+
+    }
+
 
     /**
      * Inheritance
