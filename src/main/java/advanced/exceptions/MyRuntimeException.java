@@ -1,9 +1,9 @@
 package advanced.exceptions;
 
-public class MyRuntimeException extends RuntimeException{
+public class MyRuntimeException extends RuntimeException {
 
 
-    public MyRuntimeException(String message){
-     super(message);
+    public MyRuntimeException(String message) {
+        super(message);
     }
 }

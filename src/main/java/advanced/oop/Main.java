@@ -1,4 +1,4 @@
-package advanced;
+package advanced.oop;
 
 import advanced.oop.inheritance.Animal;
 import advanced.oop.inheritance.Cat;

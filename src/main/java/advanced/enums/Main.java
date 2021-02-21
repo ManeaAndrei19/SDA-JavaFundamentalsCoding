@@ -6,7 +6,7 @@ public class Main {
 
         System.out.println(lengthUnit + " has value " + lengthUnit.getValue());
 
-        switch (lengthUnit){
+        switch (lengthUnit) {
             case METER:
                 System.out.println("We chose METER");
                 break;
@@ -24,7 +24,7 @@ public class Main {
         System.out.println(lengthUnit.name());
         System.out.println("################");
         for (LengthUnit unit : LengthUnit.values()
-             ) {
+        ) {
             System.out.println(unit);
 
         }
