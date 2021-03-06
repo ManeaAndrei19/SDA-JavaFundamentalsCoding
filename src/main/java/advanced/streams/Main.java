@@ -43,14 +43,14 @@ public class Main {
         boolean allNamesLengthIsGreaterThan3=names.stream()
                 .allMatch(n->n.length()>3);
 
-        boolean thereIsaNameWichLengthIsGreaterThan7=names.stream()
+        boolean thereIsaNameWhichLengthIsGreaterThan7=names.stream()
                 .anyMatch(n->n.length()>7);
 
         if (allNamesLengthIsGreaterThan3){
             System.out.println("All names are greater than 3 characters");
         }
 
-        if (thereIsaNameWichLengthIsGreaterThan7){
+        if (thereIsaNameWhichLengthIsGreaterThan7){
             System.out.println("At least 1 name is greater than 7");
         }
 
