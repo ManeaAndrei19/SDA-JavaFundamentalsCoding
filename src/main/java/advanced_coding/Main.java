@@ -28,6 +28,9 @@ public class Main {
         printGroups();
 
         displayStudentsAlphabeticallyByLastName();
+        displayMaxStudentGroupClassicMethod();
+
+        displayAllMaxStudentGroupClassicMethod();
     }
 
     private static void createClassroom() {
@@ -59,7 +62,7 @@ public class Main {
         Student student9 = new Student("student9", "Pian", LocalDate.of(1997, Month.SEPTEMBER, 19), true);
         Student student10 = new Student("student10", "Geana", LocalDate.of(1997, Month.SEPTEMBER, 19), true);
 
-        students = new HashSet<Student>();
+        students = new LinkedHashSet<Student>();
         students.add(student1);
         students.add(student2);
         students.add(student3);
@@ -71,21 +74,21 @@ public class Main {
         students.add(student9);
         students.add(student10);
 
-        students1 = new HashSet<Student>();
+        students1 = new LinkedHashSet<Student>();
         students1.add(student1);
         students1.add(student2);
         students1.add(student3);
 
-        students2 = new HashSet<Student>();
+        students2 = new LinkedHashSet<Student>();
         students2.add(student4);
         students2.add(student5);
         students2.add(student6);
 
-        students3 = new HashSet<Student>();
+        students3 = new LinkedHashSet<Student>();
         students3.add(student7);
         students3.add(student8);
 
-        students4 = new HashSet<Student>();
+        students4 = new LinkedHashSet<Student>();
         students4.add(student9);
         students4.add(student10);
     }
@@ -99,10 +102,10 @@ public class Main {
     }
 
     private static void addGroups() {
-        group1 = new Group(trainer1, students1);
-        group2 = new Group(trainer2, students2);
-        group3 = new Group(trainer1, students3);
-        group4 = new Group(trainer3, students4);
+        group1 = new Group("Groupe Nr1", trainer1, students1);
+        group2 = new Group("Groupe Nr2", trainer2, students2);
+        group3 = new Group("Groupe Nr3", trainer1, students3);
+        group4 = new Group("Groupe Nr4", trainer3, students4);
 
         groups = Arrays.asList(group1, group2, group3, group4);
     }
@@ -126,7 +129,40 @@ public class Main {
         System.out.println("##########Students Alphabetically By Last Name##########");
         students.stream()
                 .sorted(Comparator.comparing(student -> student.getLastName()))
-                .forEach(student -> System.out.println(student));
+                .forEach(student -> System.out.print(student));
+    }
+
+    private static void displayMaxStudentGroupFunctionalMethod() {
+        System.out.println("##########Largest Student Group Functional Method##########");
+//        groups.stream()
+//                .sorted(Comparator.comparing(group -> group.getStudents().size()));
+    }
+
+    private static void displayMaxStudentGroupClassicMethod() {
+        System.out.println("##########Largest Student Group Classic Method##########");
+        Group aux = new Group(null, null, new LinkedHashSet());
+        for (Group group : groups) {
+            if (group.getStudents().size() > aux.getStudents().size()) {
+                aux = group;
+            }
+        }
+        System.out.println(aux.getName());
+    }
+
+    private static void displayAllMaxStudentGroupClassicMethod() {
+        System.out.println("##########All Largest Student Group Classic Method##########");
+        Group aux = new Group(null, null, new LinkedHashSet());
+        List<Group> maxGroups = new ArrayList<>();
+        for (Group group : groups) {
+            if (group.getStudents().size() > aux.getStudents().size()) {
+                aux = group;
+                maxGroups = new ArrayList<>();
+                maxGroups.add(group);
+            } else if (group.getStudents().size() == aux.getStudents().size()) {
+                maxGroups.add(group);
+            }
+        }
+        System.out.println(maxGroups);
     }
 
 }
