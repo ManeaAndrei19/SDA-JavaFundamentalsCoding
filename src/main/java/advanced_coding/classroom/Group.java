@@ -1,39 +1,20 @@
 package advanced_coding.classroom;
 
-import java.util.List;
+import java.util.Set;
 
 public class Group {
-    private String name;
     private Trainer trainer;
-    private List<Student> students;
+    private Set<Student> students;
 
-    public Group(String name, Trainer trainer, List<Student> students) {
-        this.name = name;
+    public Group(Trainer trainer, Set<Student> students) {
         this.trainer = trainer;
         this.students = students;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public Trainer getTrainer() {
-        return trainer;
-    }
-
-    public List<Student> getStudents() {
-        return students;
-    }
-
-    public void setTrainer(Trainer trainer) {
-        this.trainer = trainer;
     }
 
     @Override
     public String toString() {
         return "Group{" +
-                "name='" + name + "\n" +
-                ", trainer=" + trainer +
+                " trainer=" + trainer +
                 ", students=" + students +
                 '}';
     }
