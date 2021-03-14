@@ -7,10 +7,8 @@ import advanced_coding.classroom.Trainer;
 
 import java.time.LocalDate;
 import java.time.Month;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class Main {
 
@@ -28,21 +26,8 @@ public class Main {
         printStudents();
         printTrainers();
         printGroups();
-    }
 
-    private static void printStudents() {
-        System.out.println("##########Students##########");
-        System.out.println(students);
-    }
-
-    private static void printTrainers() {
-        System.out.println("##########Trainers##########");
-        System.out.println(trainers);
-    }
-
-    private static void printGroups() {
-        System.out.println("##########Groups##########");
-        System.out.println(groups);
+        displayStudentsAlphabeticallyByLastName();
     }
 
     private static void createClassroom() {
@@ -67,7 +52,7 @@ public class Main {
         Student student2 = new Student("student2", "Ulcior", LocalDate.of(1997, Month.SEPTEMBER, 19), true);
         Student student3 = new Student("student3", "Prosop", LocalDate.of(1997, Month.SEPTEMBER, 19), true);
         Student student4 = new Student("student4", "Cana", LocalDate.of(1997, Month.SEPTEMBER, 19), true);
-        Student student5 = new Student("student5", "Cini", LocalDate.of(1997, Month.SEPTEMBER, 19), true);
+        Student student5 = new Student("student5", "Aaa", LocalDate.of(1997, Month.SEPTEMBER, 19), true);
         Student student6 = new Student("student6", "Mini", LocalDate.of(1997, Month.SEPTEMBER, 19), true);
         Student student7 = new Student("student7", "Ini", LocalDate.of(1997, Month.SEPTEMBER, 19), true);
         Student student8 = new Student("student8", "Popa", LocalDate.of(1997, Month.SEPTEMBER, 19), true);
@@ -120,6 +105,28 @@ public class Main {
         group4 = new Group(trainer3, students4);
 
         groups = Arrays.asList(group1, group2, group3, group4);
+    }
+
+    private static void printStudents() {
+        System.out.println("##########Students##########");
+        System.out.println(students);
+    }
+
+    private static void printTrainers() {
+        System.out.println("##########Trainers##########");
+        System.out.println(trainers);
+    }
+
+    private static void printGroups() {
+        System.out.println("##########Groups##########");
+        System.out.println(groups);
+    }
+
+    private static void displayStudentsAlphabeticallyByLastName() {
+        System.out.println("##########Students Alphabetically By Last Name##########");
+        students.stream()
+                .sorted(Comparator.comparing(student -> student.getLastName()))
+                .forEach(student -> System.out.println(student));
     }
 
 }

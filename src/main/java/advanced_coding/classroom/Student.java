@@ -19,6 +19,10 @@ public class Student extends Person {
         this.hasPreviousJavaKnowledge = hasPreviousJavaKnowledge;
     }
 
+    public String getLastName() {
+        return super.getLastName();
+    }
+
     @Override
     public String toString() {
         return "Student{" +
