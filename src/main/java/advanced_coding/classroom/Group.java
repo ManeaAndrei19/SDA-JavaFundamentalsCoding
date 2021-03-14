@@ -8,7 +8,11 @@ public class Group {
 
     public Group(Trainer trainer, Set<Student> students) {
         this.trainer = trainer;
-        this.students = students;
+        if (students.size() <= 5) {
+            this.students = students;
+        } else {
+            throw new MaximumNumberOfStudentsException("Student limit exceeded");
+        }
     }
 
     @Override

@@ -11,7 +11,8 @@
 
 //Ensure the fact that a group will only have distinct students (How would you do that?)
 
-Ensure the fact that a group will only have a maximum of 5 students; When you try to add a 6th one throw an MaximumNumberOfStudentsReached exception
+//Ensure the fact that a group will only have a maximum of 5 students; When you try to add a 6th one throw an 
+MaximumNumberOfStudentsReached exception
 
 Display all students in a group sorted alphabetically by lastName
 
