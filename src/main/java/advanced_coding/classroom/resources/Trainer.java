@@ -1,7 +1,6 @@
-package advanced_coding.classroom;
+package advanced_coding.classroom.resources;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 public class Trainer extends Person {
     private boolean isAuthorized;

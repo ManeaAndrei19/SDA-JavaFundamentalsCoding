@@ -1,14 +1,12 @@
-package advanced_coding;
+package advanced_coding.classroom;
 
-import advanced_coding.classroom.Group;
-import advanced_coding.classroom.MaximumNumberOfStudentsException;
-import advanced_coding.classroom.Student;
-import advanced_coding.classroom.Trainer;
+import advanced_coding.classroom.resources.Group;
+import advanced_coding.classroom.resources.Student;
+import advanced_coding.classroom.resources.Trainer;
 
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class Main {
 

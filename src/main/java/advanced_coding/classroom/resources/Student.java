@@ -1,4 +1,4 @@
-package advanced_coding.classroom;
+package advanced_coding.classroom.resources;
 
 import java.time.LocalDate;
 
