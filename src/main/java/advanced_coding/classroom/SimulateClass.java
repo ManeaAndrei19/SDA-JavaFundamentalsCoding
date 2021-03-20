@@ -8,7 +8,7 @@ import java.time.LocalDate;
 import java.time.Month;
 import java.util.*;
 
-public class Main {
+public class SimulateClass {
 
     private static Set<Student> students;
     private static List<Trainer> trainers;
@@ -161,6 +161,21 @@ public class Main {
             }
         }
         System.out.println(maxGroups);
+    }
+
+    public static List<Group> getAllGroupsWithMaxNumberOfStudents(List<Group> groupList) {
+        List<Group> maxGroupList = new ArrayList<>();
+        Group maxGroup = new Group(null, null, new LinkedHashSet<>());
+        for (Group element : groupList) {
+            if (element.getStudents().size() > maxGroup.getStudents().size()) {
+                maxGroup = element;
+                maxGroupList = new ArrayList<>();
+                maxGroupList.add(element);
+            } else if (element.getStudents().size() == maxGroup.getStudents().size()) {
+                maxGroupList.add(element);
+            }
+        }
+        return maxGroupList;
     }
 
 }
